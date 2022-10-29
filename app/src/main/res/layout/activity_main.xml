@@ -14,11 +14,11 @@
         android:text="@string/start_record"
         android:textAllCaps="false"
         android:layout_marginBottom="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/endRecord"
+        app:layout_constraintEnd_toEndOf="@+id/endRecord"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/button2" />
+        app:layout_constraintStart_toStartOf="@+id/endRecord" />
 
     <Button
         android:id="@+id/endRecord"

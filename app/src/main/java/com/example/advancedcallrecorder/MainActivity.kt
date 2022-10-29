@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
             startCallRecordClick(it)
         }
 
-        findViewById<Button>(R.id.startRecord).setOnClickListener {
+        findViewById<Button>(R.id.endRecord).setOnClickListener {
             Toast.makeText(this, "Record stopped", Toast.LENGTH_LONG).show()
             stopCallRecordClick(it)
         }

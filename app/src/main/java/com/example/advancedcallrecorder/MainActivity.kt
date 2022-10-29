@@ -4,6 +4,8 @@ import android.media.MediaRecorder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
+import android.widget.Toast
 import com.aykuttasil.callrecord.CallRecord
 import com.aykuttasil.callrecord.helper.LogUtils
 
@@ -45,9 +47,19 @@ class MainActivity : AppCompatActivity() {
                 .buildService();
         callRecord.startCallRecordService();
         */
+
+        findViewById<Button>(R.id.startRecord).setOnClickListener{
+            Toast.makeText(this, "Record started", Toast.LENGTH_LONG).show()
+            startCallRecordClick(it)
+        }
+
+        findViewById<Button>(R.id.startRecord).setOnClickListener {
+            Toast.makeText(this, "Record stopped", Toast.LENGTH_LONG).show()
+            stopCallRecordClick(it)
+        }
     }
 
-    fun StartCallRecordClick(view: View) {
+    fun startCallRecordClick(view: View) {
         LogUtils.i(TAG, "StartCallRecordClick")
         callRecord.startCallReceiver()
 
@@ -55,7 +67,7 @@ class MainActivity : AppCompatActivity() {
         //callRecord.changeRecordDirName("NewDirName");
     }
 
-    fun StopCallRecordClick(view: View) {
+    fun stopCallRecordClick(view: View) {
         LogUtils.i(TAG, "StopCallRecordClick")
         callRecord.stopCallReceiver()
 

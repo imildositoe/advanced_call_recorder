@@ -32,7 +32,6 @@ class MainActivity : AppCompatActivity() {
             .build()
 
         //callRecord.changeReceiver(new MyCallRecordReceiver(callRecord));
-
         //callRecord.enableSaveFile();
 
         /*
